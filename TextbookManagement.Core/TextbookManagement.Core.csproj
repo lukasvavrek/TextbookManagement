@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Scenarios\Books\Commands\RegisterNewBook" />
+      <Folder Include="Scenarios\Orders\Commands\RegisterNewOrder" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TextbookManagement.Domain\TextbookManagement.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Contracts" Version="1.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    </ItemGroup>
+
+</Project>

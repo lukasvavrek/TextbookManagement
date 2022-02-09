@@ -1,0 +1,18 @@
+﻿@model List<TextbookManagement.Domain.Textbook>
+
+<h2>Zoznam kníh</h2>
+<table class="table table-striped">
+    <thead>
+        <th>Názov titulu</th>
+        <th>Autor</th>
+    </thead>    
+    <tbody>
+        @foreach (var textbook in Model)
+        {
+            <tr>
+                <td>@textbook.Title</td>
+                <td>@textbook.Author</td>
+            </tr>
+        }
+    </tbody>
+</table>

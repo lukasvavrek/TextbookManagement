@@ -1,0 +1,22 @@
+﻿@model List<TextbookManagement.Domain.Order>
+
+<h2>Zoznam objednávok</h2>
+<table class="table table-striped">
+    <thead>
+        <th>Identifikátor</th>
+        <th>Počet kníh</th>
+        <th>Dátum objednávky</th>
+        <th>Stav objednávky</th>
+    </thead>    
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Textbooks.Count</td>
+                <td>@order.OrderedAt.ToString()</td>
+                <td>@order.OrderStatus</td>
+            </tr>
+        }
+    </tbody>
+</table>
